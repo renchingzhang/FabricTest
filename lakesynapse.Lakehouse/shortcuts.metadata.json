@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Weather",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/Weather",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  },
+  {
+    "name": "Trip",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/Trip",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  },
+  {
+    "name": "Time",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/Time",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  },
+  {
+    "name": "Medallion",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/Medallion",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  },
+  {
+    "name": "HackneyLicense",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/HackneyLicense",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  },
+  {
+    "name": "Geography",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/Geography",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  },
+  {
+    "name": "Date",
+    "path": "/Tables/warehouse",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/Date",
+        "itemId": "6f021df6-f2d0-8f71-46c6-af2a4933c30b",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Warehouse"
+      }
+    }
+  }
+]

@@ -1,0 +1,813 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "df38d2ab-0019-945e-4bb5-cd4c1e135f24",
+  "workspaceId": "00000000-0000-0000-0000-000000000000",
+  "dataSourceInstructions": null,
+  "displayName": "lakesynapse",
+  "type": "lakehouse_tables",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "e2dd0c9a-0707-4a17-a5d9-bb0e1814308e",
+      "is_selected": false,
+      "display_name": "warehouse",
+      "type": "lakehouse_tables.schema",
+      "description": null,
+      "children": [
+        {
+          "id": "a50b71f0-5b99-4255-aa70-9a0b4a73c281",
+          "is_selected": true,
+          "display_name": "Date",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "06507e81-608b-4e62-86e8-f191b158fa73",
+              "is_selected": true,
+              "display_name": "Date",
+              "type": "lakehouse_tables.column",
+              "data_type": "datetime2",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "8321130f-afcf-4c01-9278-c6b9c82e16db",
+              "is_selected": true,
+              "display_name": "DateBKey",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "8f639fab-f344-4a5b-a176-8a184f4bfe7c",
+              "is_selected": true,
+              "display_name": "DateID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "5f6be67f-66ac-4a8c-a8a5-f9fafe8d9889",
+              "is_selected": true,
+              "display_name": "DayName",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "a0dd7796-fb4d-4ff0-9962-ce5f0c90789f",
+              "is_selected": true,
+              "display_name": "DayOfMonth",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cb81809e-5ff3-42b2-a893-4f1db3b2e664",
+              "is_selected": true,
+              "display_name": "DayOfQuarter",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "df64cb5e-d0ce-48bc-b100-cc1b126e8d78",
+              "is_selected": true,
+              "display_name": "DayOfWeek",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "c45f6736-ad75-4aee-8fc9-3eb5d7d87bf8",
+              "is_selected": true,
+              "display_name": "DayOfWeekInMonth",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "43130337-4e48-48cd-87b6-aff1fde00774",
+              "is_selected": true,
+              "display_name": "DayOfWeekInYear",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "aec63b01-0403-40d5-9bc8-04d600d86564",
+              "is_selected": true,
+              "display_name": "DayOfYear",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "d1223aa4-04cd-4375-a603-1fb8002122e7",
+              "is_selected": true,
+              "display_name": "DaySuffix",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "87448ff0-366b-4b9d-a0cf-0b4915d307ed",
+              "is_selected": true,
+              "display_name": "FirstDayOfMonth",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "1421a32e-395c-4e98-94e5-09a942b01806",
+              "is_selected": true,
+              "display_name": "FirstDayOfQuarter",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "cc77c5da-9db0-4f55-b450-46cc5d2162a9",
+              "is_selected": true,
+              "display_name": "FirstDayOfYear",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ff04209a-98af-4a78-bd5c-e3eacc1a9e5e",
+              "is_selected": true,
+              "display_name": "HolidayUSA",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "d44f56fc-798a-4250-afa5-cfbe46e10b37",
+              "is_selected": true,
+              "display_name": "IsHolidayUSA",
+              "type": "lakehouse_tables.column",
+              "data_type": "bit",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "10733192-8699-42fb-af44-1e4248403738",
+              "is_selected": true,
+              "display_name": "IsWeekday",
+              "type": "lakehouse_tables.column",
+              "data_type": "bit",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "497d0f3e-8cfe-4a96-b426-b57e1634ba43",
+              "is_selected": true,
+              "display_name": "LastDayOfMonth",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "41c3577f-a634-4eb3-b592-c7b6fc7521e9",
+              "is_selected": true,
+              "display_name": "LastDayOfQuarter",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "4fb55d75-8a36-4380-b2e5-7118e7b2c44d",
+              "is_selected": true,
+              "display_name": "LastDayOfYear",
+              "type": "lakehouse_tables.column",
+              "data_type": "date",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "49f0d9ff-b55f-47e7-bb90-23fdf8ba9e3a",
+              "is_selected": true,
+              "display_name": "MMYYYY",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "a3c4d63f-74a5-474a-aca2-c05dffeed58a",
+              "is_selected": true,
+              "display_name": "Month",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "bd591ddd-e98e-4562-a6fb-efa314167256",
+              "is_selected": true,
+              "display_name": "MonthName",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "2b01b115-d086-47bf-a5fd-fef651fd533d",
+              "is_selected": true,
+              "display_name": "MonthOfQuarter",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b82f21d2-e04c-4690-94d7-f9c7365b2ec3",
+              "is_selected": true,
+              "display_name": "MonthYear",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "a3a123c4-5b88-4f56-8fa6-a21cd70ef41b",
+              "is_selected": true,
+              "display_name": "Quarter",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "26d0a01f-4514-4855-b9d6-0e5608e43412",
+              "is_selected": true,
+              "display_name": "QuarterName",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "e036ecd9-6296-4651-8480-71df8bee498d",
+              "is_selected": true,
+              "display_name": "WeekOfMonth",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "2585c771-2fad-4fa8-9cd6-820bb2c2c390",
+              "is_selected": true,
+              "display_name": "WeekOfQuarter",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b388280d-4eec-473f-8702-9c5fc6563ee8",
+              "is_selected": true,
+              "display_name": "WeekOfYear",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "e5c64d68-f008-49d6-8d69-dec4594955a6",
+              "is_selected": true,
+              "display_name": "Year",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "7e8e3d9a-be29-4cf8-9915-c6cea31959eb",
+              "is_selected": true,
+              "display_name": "YearName",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "a5825ef9-59c5-45b4-983e-9629cbe4b425",
+          "is_selected": false,
+          "display_name": "Geography",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "a32dc83c-7cf6-46b0-a79f-376426b0a306",
+              "is_selected": true,
+              "display_name": "City",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b95c9e7c-e350-4709-b64f-a4f3484f919b",
+              "is_selected": true,
+              "display_name": "Country",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "dcd52715-6a39-4066-9230-41f1d0d2881d",
+              "is_selected": true,
+              "display_name": "County",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "9932ebb0-a637-40ec-ad55-7b85cbdd69ea",
+              "is_selected": true,
+              "display_name": "GeographyID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b74f3b90-c9dd-41c7-80f8-b3ce306e868a",
+              "is_selected": true,
+              "display_name": "State",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "4d86c19c-5d2a-4dee-9321-4b6b31ec4f26",
+              "is_selected": true,
+              "display_name": "ZipCode",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "be58399b-75a3-4046-9bfa-fd7640ac4d6e",
+              "is_selected": true,
+              "display_name": "ZipCodeBKey",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "2ee66faa-e50f-48cc-8e1e-69fefd39c77b",
+          "is_selected": false,
+          "display_name": "HackneyLicense",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "7e5a8642-d7c7-4949-9f2c-ac32291937c6",
+              "is_selected": true,
+              "display_name": "HackneyLicenseBKey",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "c99cfdf4-5a2b-4517-aaba-71641a1f4ab9",
+              "is_selected": true,
+              "display_name": "HackneyLicenseCode",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "4604c5d0-34ca-41aa-bef2-b6f78ac2affb",
+              "is_selected": true,
+              "display_name": "HackneyLicenseID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "96ffde05-5ca2-4db5-9943-daf43c756d33",
+          "is_selected": false,
+          "display_name": "Medallion",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "09da8140-63a6-4c7f-9c79-6db8eab8af49",
+              "is_selected": true,
+              "display_name": "MedallionBKey",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ff59ffc3-a6dd-4bf3-976b-c5e11f398119",
+              "is_selected": true,
+              "display_name": "MedallionCode",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "373861ce-c97f-494b-b394-634c229e4505",
+              "is_selected": true,
+              "display_name": "MedallionID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "7bb99049-b371-4542-a47b-b10d26b66534",
+          "is_selected": false,
+          "display_name": "Time",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "a95f4fc6-c302-44be-a620-3648cf5a702e",
+              "is_selected": true,
+              "display_name": "DayTimeBucket",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "627b025d-0cfa-4325-9366-fa3eb9f0b6b8",
+              "is_selected": true,
+              "display_name": "DayTimeBucketGroupKey",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "6f28d039-6700-4c3d-a76a-45e1e4ec8d1f",
+              "is_selected": true,
+              "display_name": "HourlyBucket",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "3f436596-cf1b-4590-ae0e-7258a51dedf3",
+              "is_selected": true,
+              "display_name": "HourNumber",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b9a871f6-3018-4acc-b8e9-34ce51c899a4",
+              "is_selected": true,
+              "display_name": "MinuteNumber",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "bd610b2c-dc74-4a68-9a5f-b49d43d2c7ad",
+              "is_selected": true,
+              "display_name": "SecondNumber",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "2638b4be-a60d-4622-857c-eb40ca04c0b6",
+              "is_selected": true,
+              "display_name": "TimeBKey",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f2a941a9-41b2-4630-931f-9ccdcf6c0ca6",
+              "is_selected": true,
+              "display_name": "TimeID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f7b39126-1b40-4eea-8a6c-a85593cfac93",
+              "is_selected": true,
+              "display_name": "TimeInSecond",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "60c3d581-f826-4067-bef8-013b4340b37e",
+          "is_selected": true,
+          "display_name": "Trip",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "5beeec52-c605-45ae-814c-8437271e198b",
+              "is_selected": true,
+              "display_name": "DateID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "0b904997-fa19-4233-b5ff-e6725ca72c33",
+              "is_selected": true,
+              "display_name": "DropoffGeographyID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "39190056-6162-4e26-abf1-7ccbb736fa00",
+              "is_selected": true,
+              "display_name": "DropoffLatitude",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "fb2156f8-9486-4b0d-b849-f525596550d5",
+              "is_selected": true,
+              "display_name": "DropoffLatLong",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "2d1a509f-7f9f-46de-9a7b-0fe25bbccf79",
+              "is_selected": true,
+              "display_name": "DropoffLongitude",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "f840c7e9-004b-4f78-9ec6-821b9c0a3e60",
+              "is_selected": true,
+              "display_name": "DropoffTimeID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "0ffbe937-4071-461a-9cab-605dba3b1612",
+              "is_selected": true,
+              "display_name": "FareAmount",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "af153fff-a82a-4a82-af38-12e8ba41f561",
+              "is_selected": true,
+              "display_name": "HackneyLicenseID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "d50050a2-fd62-4e02-a1aa-676fa3cc5449",
+              "is_selected": true,
+              "display_name": "MedallionID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ec31cb4d-a62c-4257-8a1e-68367095e655",
+              "is_selected": true,
+              "display_name": "PassengerCount",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "8a19b1e4-8a50-4034-8d6a-627c71ef1a50",
+              "is_selected": true,
+              "display_name": "PaymentType",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "a8a2b79a-adc6-49f9-b433-d8f16dcad0f5",
+              "is_selected": true,
+              "display_name": "PickupGeographyID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "5558bc70-ed8b-4496-805a-4e29a67dca03",
+              "is_selected": true,
+              "display_name": "PickupLatitude",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "21770b0b-2ae9-4934-a268-9e749047e19a",
+              "is_selected": true,
+              "display_name": "PickupLatLong",
+              "type": "lakehouse_tables.column",
+              "data_type": "varchar",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b15261be-6f20-4613-8529-8593d25d608f",
+              "is_selected": true,
+              "display_name": "PickupLongitude",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "026a6aca-6d50-4b28-b904-378078e2ca7c",
+              "is_selected": true,
+              "display_name": "PickupTimeID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "82f8be18-dec3-467a-9b0f-8fc6f59e238d",
+              "is_selected": true,
+              "display_name": "SurchargeAmount",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "706331af-5b8b-4993-8bb8-1b6305f7514a",
+              "is_selected": true,
+              "display_name": "TaxAmount",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "b5a148c9-3991-42e8-9c41-b1945ff8320d",
+              "is_selected": true,
+              "display_name": "TipAmount",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ce6d892e-0f23-4343-8635-c3121c534304",
+              "is_selected": true,
+              "display_name": "TollsAmount",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "28f03215-2270-4841-aa69-794bc0058e3b",
+              "is_selected": true,
+              "display_name": "TotalAmount",
+              "type": "lakehouse_tables.column",
+              "data_type": "decimal",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "0a92d612-0157-48ce-8221-4bac9b7d60ed",
+              "is_selected": true,
+              "display_name": "TripDistanceMiles",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "6e309978-331f-4049-bef6-65b86b3e4e9d",
+              "is_selected": true,
+              "display_name": "TripDurationSeconds",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "d2533384-cbc3-4eb9-a4f1-9698846925e8",
+          "is_selected": false,
+          "display_name": "Weather",
+          "type": "lakehouse_tables.table",
+          "description": null,
+          "children": [
+            {
+              "id": "d3e9c76d-4259-4760-b5d1-3c4585a0e97e",
+              "is_selected": true,
+              "display_name": "AvgTemperatureFahrenheit",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "0d9c2860-82fa-4141-afe1-45ef2cc65c5a",
+              "is_selected": true,
+              "display_name": "DateID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "78137f20-4e81-4a6f-acbc-224c0971bcfa",
+              "is_selected": true,
+              "display_name": "GeographyID",
+              "type": "lakehouse_tables.column",
+              "data_type": "int",
+              "description": null,
+              "children": []
+            },
+            {
+              "id": "ae7ce27c-5741-4654-b192-829b46dce96d",
+              "is_selected": true,
+              "display_name": "PrecipitationInches",
+              "type": "lakehouse_tables.column",
+              "data_type": "float",
+              "description": null,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
