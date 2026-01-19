@@ -1,0 +1,8 @@
+relationship ded0ebea-35ff-9d52-875c-669ba6e5054a
+	fromColumn: SalesLT_SalesOrderDetail.ProductID
+	toColumn: SalesLT_Product.ProductID
+
+relationship 4782deaa-c2ab-68f6-ea16-40a7b53342fe
+	fromColumn: SalesLT_Product.ProductCategoryID
+	toColumn: SalesLT_ProductCategory.ParentProductCategoryID
+

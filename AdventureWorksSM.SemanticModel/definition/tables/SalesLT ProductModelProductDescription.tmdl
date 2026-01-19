@@ -1,0 +1,68 @@
+table 'SalesLT ProductModelProductDescription'
+	lineageTag: b62cbd58-a52d-4e3e-9cb9-8046fa32c306
+
+	column ProductModelID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d71e2acc-82dc-4a71-9949-9b21742b7e01
+		summarizeBy: none
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductDescriptionID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 89b0607d-d1bd-4c04-b271-19d790468311
+		summarizeBy: none
+		sourceColumn: ProductDescriptionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Culture
+		dataType: string
+		isNullable: false
+		sourceProviderType: nchar
+		lineageTag: 230599e3-ebc7-4deb-a6a8-f241e26f6341
+		summarizeBy: none
+		sourceColumn: Culture
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		isNullable: false
+		sourceProviderType: uniqueidentifier
+		lineageTag: cc5d6971-662d-4732-8bb8-427097d6735c
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: a4a93899-0b74-4146-90ec-aea5bd4b2f2e
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT ProductModelProductDescription' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    SalesLT_ProductModelProductDescription = AdvantureWorks{[Schema="SalesLT",Item="ProductModelProductDescription"]}[Data]
+				in
+				    SalesLT_ProductModelProductDescription
+
+	annotation PBI_ResultType = Table
+

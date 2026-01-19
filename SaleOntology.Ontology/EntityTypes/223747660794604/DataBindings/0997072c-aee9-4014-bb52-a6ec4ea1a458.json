@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "0997072c-aee9-4014-bb52-a6ec4ea1a458",
+  "dataBindingConfiguration": {
+    "dataBindingType": "TimeSeries",
+    "timestampColumnName": "timestamp",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "timestamp",
+        "targetPropertyId": "6266238394979875553"
+      },
+      {
+        "sourceColumnName": "temperatureC",
+        "targetPropertyId": "6266238392214663907"
+      },
+      {
+        "sourceColumnName": "humidityPct",
+        "targetPropertyId": "6266238393809999884"
+      },
+      {
+        "sourceColumnName": "doorOpen",
+        "targetPropertyId": "6266238395711767224"
+      },
+      {
+        "sourceColumnName": "freezerId",
+        "targetPropertyId": "6289036023083269611"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "KustoTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "2b2b52db-339f-8138-409b-c75c38de4f46",
+      "clusterUri": "https://trd-gv66a14rc4yfmyxmg9.z3.kusto.fabric.microsoft.com",
+      "databaseName": "TelemetryDataEH",
+      "sourceTableName": "FreezerTelemetry"
+    }
+  }
+}

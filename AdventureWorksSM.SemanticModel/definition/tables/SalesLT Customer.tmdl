@@ -1,0 +1,161 @@
+table 'SalesLT Customer'
+	lineageTag: 5e68bda9-f7ac-4ff9-9c3e-4f5cbb52d6aa
+
+	column CustomerID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: cc8a7036-a48a-4358-9c29-83038ba70a5f
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NameStyle
+		dataType: boolean
+		isNullable: false
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: d22455e8-80c8-49ee-b34a-cefcf7b7c9f5
+		summarizeBy: none
+		sourceColumn: NameStyle
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: nvarchar(8)
+		lineageTag: 9709f43e-0e1c-4ab0-8db9-ec859cbb1e98
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: f23fbd22-b676-429d-9578-f63fc06f775d
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 00f340e5-02ab-4323-992d-9249e389fbae
+		summarizeBy: none
+		sourceColumn: MiddleName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 00740c54-cc51-441b-be80-d71dcf73e5a9
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Suffix
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		lineageTag: 86b2bdcc-1692-4401-bb87-71d8db4b0c6d
+		summarizeBy: none
+		sourceColumn: Suffix
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		sourceProviderType: nvarchar(128)
+		lineageTag: 5021f322-3b90-46f1-a3d2-8175dc46dc46
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesPerson
+		dataType: string
+		sourceProviderType: nvarchar(256)
+		lineageTag: 9278042a-f997-4292-9aa3-93362fed13fb
+		summarizeBy: none
+		sourceColumn: SalesPerson
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: d98d2b86-42ea-4fca-9ec1-066cdc1eb3a5
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		sourceProviderType: nvarchar(25)
+		lineageTag: c0b1b6b8-36b4-4156-b9e1-7c40eaa2748f
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column PasswordHash
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(128)
+		lineageTag: e1cdae6c-aeb2-4125-9715-b07d92d65758
+		summarizeBy: none
+		sourceColumn: PasswordHash
+
+		annotation SummarizationSetBy = Automatic
+
+	column PasswordSalt
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(10)
+		lineageTag: 32b2d298-9568-4d67-a381-a158f315d23d
+		summarizeBy: none
+		sourceColumn: PasswordSalt
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		isNullable: false
+		sourceProviderType: uniqueidentifier
+		lineageTag: f0043b1c-84cd-4a47-a86a-5444651658fa
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: b746b237-9ba0-47e8-a51c-14565c895e08
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT Customer' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    SalesLT_Customer = AdvantureWorks{[Schema="SalesLT",Item="Customer"]}[Data]
+				in
+				    SalesLT_Customer
+
+	annotation PBI_ResultType = Table
+

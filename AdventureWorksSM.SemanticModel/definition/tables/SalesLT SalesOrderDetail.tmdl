@@ -1,0 +1,118 @@
+table 'SalesLT SalesOrderDetail'
+	lineageTag: a83c0096-a59f-4c43-b4b2-7e89a91ef897
+
+	column SalesOrderID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 35fb7946-2359-477a-80c8-a6acb72014bd
+		summarizeBy: none
+		sourceColumn: SalesOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderDetailID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 9114f574-4d2a-4487-841a-892ba348143a
+		summarizeBy: count
+		sourceColumn: SalesOrderDetailID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQty
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: smallint
+		lineageTag: 2a552095-d45a-41e2-bb0d-ec1e3baab396
+		summarizeBy: sum
+		sourceColumn: OrderQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: fdd58694-19b2-4bf9-9325-09fabde25fc3
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: decimal
+		isNullable: false
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		lineageTag: 625e7a26-5b26-4e7f-b066-1970b672ae4c
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column UnitPriceDiscount
+		dataType: decimal
+		isNullable: false
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		lineageTag: 6610f23c-f742-4738-bda6-b4dfe0560243
+		summarizeBy: sum
+		sourceColumn: UnitPriceDiscount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column LineTotal
+		dataType: double
+		isNullable: false
+		sourceProviderType: decimal(38, 6)
+		lineageTag: 119e39bc-cef5-4afb-b6ac-f4f7682e1873
+		summarizeBy: sum
+		sourceColumn: LineTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rowguid
+		dataType: string
+		isNullable: false
+		sourceProviderType: uniqueidentifier
+		lineageTag: 7a1ce255-350d-4c83-943d-31ad5305f98f
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: f0a451c5-dd13-4112-b1a0-7280891fdf28
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT SalesOrderDetail' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    SalesLT_SalesOrderDetail = AdvantureWorks{[Schema="SalesLT",Item="SalesOrderDetail"]}[Data]
+				in
+				    SalesLT_SalesOrderDetail
+
+	annotation PBI_ResultType = Table
+

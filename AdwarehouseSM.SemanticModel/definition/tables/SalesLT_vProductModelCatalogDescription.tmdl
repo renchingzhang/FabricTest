@@ -1,0 +1,265 @@
+table SalesLT_vProductModelCatalogDescription
+	lineageTag: 887472a4-b47e-4eb6-9a54-11807302a701
+	sourceLineageTag: [dbo].[SalesLT_vProductModelCatalogDescription]
+
+	column ProductModelID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 803093ee-5b04-421c-83f8-6f5ca10b0362
+		sourceLineageTag: ProductModelID
+		summarizeBy: count
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef08ccb2-09d6-42f9-99c1-d5976256fe6e
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Summary
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 302b19a5-7107-416d-b2ee-36ea3a5ba639
+		sourceLineageTag: Summary
+		summarizeBy: none
+		sourceColumn: Summary
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manufacturer
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 89a3e052-171c-4ee8-8bdc-52359ed17a4c
+		sourceLineageTag: Manufacturer
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Copyright
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a84fcf63-ed7d-4bb1-a3bf-44cbd5297356
+		sourceLineageTag: Copyright
+		summarizeBy: none
+		sourceColumn: Copyright
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductURL
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95ff7a48-e6b5-4daa-b596-23cc1693048d
+		sourceLineageTag: ProductURL
+		summarizeBy: none
+		sourceColumn: ProductURL
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: fa26de91-ec5e-4174-a992-c98f9e28af84
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Material
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5a38b7d6-4c6c-443d-87de-d92a768b6503
+		sourceLineageTag: Material
+		summarizeBy: none
+		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9ed02864-30fc-4960-b61c-ce4f4ac2ca0a
+		sourceLineageTag: Color
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLine
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: be874703-3df9-4290-ae6c-af1ce7134b75
+		sourceLineageTag: ProductLine
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7502b8db-1e8a-4ab2-81c7-6c188e07df41
+		sourceLineageTag: Style
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+	column RiderExperience
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 179b97a2-abe7-445f-b767-f68d26a8678c
+		sourceLineageTag: RiderExperience
+		summarizeBy: none
+		sourceColumn: RiderExperience
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6eed1390-a184-481b-8e1d-3f8858f42d02
+		sourceLineageTag: rowguid
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pedal
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: af10af20-c0ca-4832-8c86-7b0a4a522014
+		sourceLineageTag: Pedal
+		summarizeBy: none
+		sourceColumn: Pedal
+
+		annotation SummarizationSetBy = Automatic
+
+	column BikeFrame
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f5a49f5c-156f-4df5-9551-500afe24cd67
+		sourceLineageTag: BikeFrame
+		summarizeBy: none
+		sourceColumn: BikeFrame
+
+		annotation SummarizationSetBy = Automatic
+
+	column Crankset
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 95403e49-3376-43a7-8a27-08e3599972ff
+		sourceLineageTag: Crankset
+		summarizeBy: none
+		sourceColumn: Crankset
+
+		annotation SummarizationSetBy = Automatic
+
+	column PictureAngle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: bce3baa7-ec16-4459-a24d-ea6e290bfbea
+		sourceLineageTag: PictureAngle
+		summarizeBy: none
+		sourceColumn: PictureAngle
+
+		annotation SummarizationSetBy = Automatic
+
+	column PictureSize
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 15eae4f9-b800-4850-93f9-64fce0df5352
+		sourceLineageTag: PictureSize
+		summarizeBy: none
+		sourceColumn: PictureSize
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductPhotoID
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c1f5a654-c4b0-4c18-8217-e22036e6d816
+		sourceLineageTag: ProductPhotoID
+		summarizeBy: none
+		sourceColumn: ProductPhotoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column WarrantyPeriod
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e111d63e-c7b3-4a15-868b-70aec777799d
+		sourceLineageTag: WarrantyPeriod
+		summarizeBy: none
+		sourceColumn: WarrantyPeriod
+
+		annotation SummarizationSetBy = Automatic
+
+	column WarrantyDescription
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: da0c21fb-afe6-43fa-b422-cf8fede76616
+		sourceLineageTag: WarrantyDescription
+		summarizeBy: none
+		sourceColumn: WarrantyDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column NoOfYears
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 67c8b874-c2d8-4293-9055-8a0b271a60b9
+		sourceLineageTag: NoOfYears
+		summarizeBy: none
+		sourceColumn: NoOfYears
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaintenanceDescription
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: adac4e9a-7e33-4c37-8f22-781362da71a3
+		sourceLineageTag: MaintenanceDescription
+		summarizeBy: none
+		sourceColumn: MaintenanceDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wheel
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: da378701-ad31-4752-a846-46f8e2f41ac1
+		sourceLineageTag: Wheel
+		summarizeBy: none
+		sourceColumn: Wheel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Saddle
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b99c5d6d-8318-4ab4-8467-1d5138fbad0f
+		sourceLineageTag: Saddle
+		summarizeBy: none
+		sourceColumn: Saddle
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SalesLT_vProductModelCatalogDescription = entity
+		mode: directLake
+		source
+			entityName: SalesLT_vProductModelCatalogDescription
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

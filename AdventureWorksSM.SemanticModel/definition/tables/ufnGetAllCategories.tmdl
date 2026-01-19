@@ -1,0 +1,46 @@
+table ufnGetAllCategories
+	lineageTag: 90b0e2f7-4dd1-4a5a-83f3-9b1d931d4f44
+
+	column ParentProductCategoryName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: bff01cca-199e-42ff-963a-3f20e50bf6d1
+		summarizeBy: none
+		sourceColumn: ParentProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 7223adca-69bf-4365-b8ba-8771d43d9666
+		summarizeBy: none
+		sourceColumn: ProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f2684772-b508-45e8-8f08-0c6eb04f7df4
+		summarizeBy: count
+		sourceColumn: ProductCategoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ufnGetAllCategories = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    dbo_ufnGetAllCategories = AdvantureWorks{[Schema="dbo",Item="ufnGetAllCategories"]}[Data],
+				    #"Invoked Functiondbo_ufnGetAllCategories1" = dbo_ufnGetAllCategories()
+				in
+				    #"Invoked Functiondbo_ufnGetAllCategories1"
+
+	annotation PBI_ResultType = Table
+

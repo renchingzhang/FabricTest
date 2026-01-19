@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "0b852b58-1015-4937-bcd9-9db4aa56d764",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "ProductId",
+        "targetPropertyId": "6335336885837089889"
+      },
+      {
+        "sourceColumnName": "ProductName",
+        "targetPropertyId": "6335336860650317936"
+      },
+      {
+        "sourceColumnName": "Category",
+        "targetPropertyId": "6335336836372044966"
+      },
+      {
+        "sourceColumnName": "Subcategory",
+        "targetPropertyId": "6335336814229236270"
+      },
+      {
+        "sourceColumnName": "Brand",
+        "targetPropertyId": "6335336794368063975"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "920eb8d1-1595-9c54-4c04-2d8655249716",
+      "sourceTableName": "dimproducts",
+      "sourceSchema": null
+    }
+  }
+}

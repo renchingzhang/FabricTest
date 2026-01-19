@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/contextualization/1.0.0/schema.json",
+  "id": "cc9c03e6-a317-410e-8335-860f0b12ffe4",
+  "dataBindingTable": {
+    "workspaceId": "00000000-0000-0000-0000-000000000000",
+    "itemId": "920eb8d1-1595-9c54-4c04-2d8655249716",
+    "sourceTableName": "freezer",
+    "sourceSchema": null,
+    "sourceType": "LakehouseTable"
+  },
+  "sourceKeyRefBindings": [
+    {
+      "sourceColumnName": "StoreId",
+      "targetPropertyId": "6335336634523678585"
+    }
+  ],
+  "targetKeyRefBindings": [
+    {
+      "sourceColumnName": "FreezerId",
+      "targetPropertyId": "6289036023083269611"
+    }
+  ]
+}

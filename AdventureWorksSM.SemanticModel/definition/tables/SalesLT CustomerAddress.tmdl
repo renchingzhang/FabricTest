@@ -1,0 +1,68 @@
+table 'SalesLT CustomerAddress'
+	lineageTag: 80e5a345-c25b-406b-bd46-a72100aa9145
+
+	column CustomerID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 5d273bcf-136f-4f4f-9683-068c2c6f62c6
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 8aacbf72-5fda-45af-b17a-9b097aec756f
+		summarizeBy: none
+		sourceColumn: AddressID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressType
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: a2e1cf37-b51f-45c5-8aa1-3cc8762dc713
+		summarizeBy: none
+		sourceColumn: AddressType
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		isNullable: false
+		sourceProviderType: uniqueidentifier
+		lineageTag: c1edae40-2086-4335-a648-99e85114dad6
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 95e0aeff-5af0-43c1-89e5-cfb421b9bcbf
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT CustomerAddress' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    SalesLT_CustomerAddress = AdvantureWorks{[Schema="SalesLT",Item="CustomerAddress"]}[Data]
+				in
+				    SalesLT_CustomerAddress
+
+	annotation PBI_ResultType = Table
+

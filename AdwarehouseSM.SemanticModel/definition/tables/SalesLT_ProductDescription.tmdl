@@ -1,0 +1,55 @@
+table SalesLT_ProductDescription
+	lineageTag: 3c075948-5a18-4b1b-a25b-e59858891135
+	sourceLineageTag: [dbo].[SalesLT_ProductDescription]
+
+	column ProductDescriptionID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 169b5210-a666-428e-9d7b-49d9022a591b
+		sourceLineageTag: ProductDescriptionID
+		summarizeBy: count
+		sourceColumn: ProductDescriptionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1f98ef01-f116-4438-8af8-0d586c2524d5
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c05dacc2-9c5a-41fa-a978-50d51b19d1ce
+		sourceLineageTag: rowguid
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 27cff92a-95b6-4926-a6a2-787bcdf37d61
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SalesLT_ProductDescription = entity
+		mode: directLake
+		source
+			entityName: SalesLT_ProductDescription
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

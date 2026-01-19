@@ -1,0 +1,44 @@
+table 'SalesLT vGetAllCategories'
+	lineageTag: 15d9ca1c-e088-4469-ac17-b09863aad34d
+
+	column ParentProductCategoryName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: bad62a29-4353-483a-9113-fe221a925966
+		summarizeBy: none
+		sourceColumn: ParentProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: fcdd3a48-0dff-453b-9228-9075ff386ac0
+		summarizeBy: none
+		sourceColumn: ProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d312a687-0d02-441d-a936-ad0254c8e358
+		summarizeBy: count
+		sourceColumn: ProductCategoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT vGetAllCategories' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    SalesLT_vGetAllCategories = AdvantureWorks{[Schema="SalesLT",Item="vGetAllCategories"]}[Data]
+				in
+				    SalesLT_vGetAllCategories
+
+	annotation PBI_ResultType = Table
+

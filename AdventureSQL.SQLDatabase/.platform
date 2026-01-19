@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SQLDatabase",
+    "displayName": "AdventureSQL"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d2b9c466-3f73-9969-42bd-bdc82a339908"
+  }
+}

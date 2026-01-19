@@ -1,0 +1,33 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["SalesLT vGetAllCategories","SalesLT vProductAndDescription","SalesLT vProductModelCatalogDescription","ErrorLog","SalesLT Address","SalesLT Customer","SalesLT CustomerAddress","SalesLT Product","SalesLT ProductCategory","SalesLT ProductDescription","SalesLT ProductModel","SalesLT ProductModelProductDescription","SalesLT SalesOrderDetail","SalesLT SalesOrderHeader","ufnGetAllCategories","ufnGetCustomerInformation","ufnGetSalesOrderStatusText"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'SalesLT vGetAllCategories'
+ref table 'SalesLT vProductAndDescription'
+ref table 'SalesLT vProductModelCatalogDescription'
+ref table ErrorLog
+ref table 'SalesLT Address'
+ref table 'SalesLT Customer'
+ref table 'SalesLT CustomerAddress'
+ref table 'SalesLT Product'
+ref table 'SalesLT ProductCategory'
+ref table 'SalesLT ProductDescription'
+ref table 'SalesLT ProductModel'
+ref table 'SalesLT ProductModelProductDescription'
+ref table 'SalesLT SalesOrderDetail'
+ref table 'SalesLT SalesOrderHeader'
+ref table ufnGetAllCategories
+ref table ufnGetCustomerInformation
+
+ref cultureInfo en-US
+

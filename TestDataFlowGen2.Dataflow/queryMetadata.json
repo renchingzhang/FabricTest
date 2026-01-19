@@ -1,0 +1,32 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "TestDataFlowGen2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Orders": {
+      "queryId": "8c75f838-54a8-4e3c-9147-e7a2bbea6490",
+      "queryName": "Orders",
+      "loadEnabled": false
+    },
+    "Orders_DataDestination": {
+      "queryId": "86119dbd-4685-4dee-bdca-89ebce501225",
+      "queryName": "Orders_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "renchingsqls1.database.windows.net;AdvantureWorks",
+      "kind": "SQL",
+      "connectionId": "{\"ClusterId\":\"5d8262de-6fcb-4cae-8457-b9279b52b8b5\",\"DatasourceId\":\"75114b74-6328-4c89-93b0-c3fbfb1eed87\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"5d8262de-6fcb-4cae-8457-b9279b52b8b5\",\"DatasourceId\":\"729e7aca-9bd8-409f-8978-ce0ef0835bd7\"}"
+    }
+  ]
+}

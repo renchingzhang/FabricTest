@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AdwarehouseSM"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "90c9a788-cb79-accb-4819-d2c42b846ecf"
+  }
+}

@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	collation: Latin1_General_100_BIN2_UTF8
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DatabaseQuery"]
+
+ref table SalesLT_vGetAllCategories
+ref table SalesLT_vProductAndDescription
+ref table SalesLT_ProductModelProductDescription
+ref table SalesLT_ProductCategory
+ref table SalesLT_ProductModel
+ref table SalesLT_Product
+ref table SalesLT_CustomerAddress
+ref table SalesLT_vProductModelCatalogDescription
+ref table SalesLT_Customer
+ref table SalesLT_SalesOrderDetail
+ref table SalesLT_SalesOrderHeader
+ref table SalesLT_Address
+ref table SalesLT_ProductDescription
+

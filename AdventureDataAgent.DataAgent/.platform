@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataAgent",
+    "displayName": "AdventureDataAgent"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d4031973-4a63-a4ef-4cb0-9b56cf2ea4d0"
+  }
+}

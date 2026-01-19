@@ -1,0 +1,11 @@
+expression ufnGetSalesOrderStatusText =
+		let
+		    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+		    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+		    dbo_ufnGetSalesOrderStatusText = AdvantureWorks{[Schema="dbo",Item="ufnGetSalesOrderStatusText"]}[Data]
+		in
+		    dbo_ufnGetSalesOrderStatusText
+	lineageTag: e587cb80-fc54-46b3-835c-0783cbfd295d
+
+	annotation PBI_ResultType = Function
+

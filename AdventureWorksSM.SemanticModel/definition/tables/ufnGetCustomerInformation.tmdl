@@ -1,0 +1,47 @@
+table ufnGetCustomerInformation
+	lineageTag: de4b4d95-d7e2-4d40-82a5-0ccd44bb833f
+
+	column CustomerID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: becc0b37-edaa-43d4-8c7f-cbafee3c07d9
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 9c5cab75-b82a-44dd-a574-87538aba3352
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: dcf0fe50-c8c2-470d-8f23-8e13536034a4
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ufnGetCustomerInformation = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    dbo_ufnGetCustomerInformation = AdvantureWorks{[Schema="dbo",Item="ufnGetCustomerInformation"]}[Data],
+				    #"Invoked Functiondbo_ufnGetCustomerInformation1" = dbo_ufnGetCustomerInformation(null)
+				in
+				    #"Invoked Functiondbo_ufnGetCustomerInformation1"
+
+	annotation PBI_ResultType = Table
+

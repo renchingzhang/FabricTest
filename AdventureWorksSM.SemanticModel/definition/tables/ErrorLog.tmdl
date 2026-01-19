@@ -1,0 +1,107 @@
+table ErrorLog
+	lineageTag: aa6b19f6-30a3-4e49-97a5-ede48d4847bc
+
+	column ErrorLogID
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: dc0dab57-bb53-4675-bed9-df4e0a308752
+		summarizeBy: count
+		sourceColumn: ErrorLogID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorTime
+		dataType: dateTime
+		isNullable: false
+		formatString: General Date
+		sourceProviderType: datetime
+		lineageTag: 6c5eff5a-a98d-4513-9fc2-dfbd77d0e957
+		summarizeBy: none
+		sourceColumn: ErrorTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column UserName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(128)
+		lineageTag: 4e9a1880-43e2-468b-9198-65cc99df9114
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorNumber
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: f8717ce8-77fd-48c9-9800-2516792cb4f2
+		summarizeBy: sum
+		sourceColumn: ErrorNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorSeverity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bc24d890-2b7b-47a7-b4ad-38e16ca8c8ba
+		summarizeBy: sum
+		sourceColumn: ErrorSeverity
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorState
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 93150da3-901f-4f12-9923-a5447f643aff
+		summarizeBy: sum
+		sourceColumn: ErrorState
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorProcedure
+		dataType: string
+		sourceProviderType: nvarchar(126)
+		lineageTag: ce022259-dca0-4ba0-a53d-16ecf95cdd56
+		summarizeBy: none
+		sourceColumn: ErrorProcedure
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorLine
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 610d6c74-67d3-4c91-8c99-b6ec5b2fa7db
+		summarizeBy: sum
+		sourceColumn: ErrorLine
+
+		annotation SummarizationSetBy = Automatic
+
+	column ErrorMessage
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(4000)
+		lineageTag: 090ee890-fb08-4763-8142-4c5200817749
+		summarizeBy: none
+		sourceColumn: ErrorMessage
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ErrorLog = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Databases("renchingsqls1.database.windows.net"),
+				    AdvantureWorks = Source{[Name="AdvantureWorks"]}[Data],
+				    dbo_ErrorLog = AdvantureWorks{[Schema="dbo",Item="ErrorLog"]}[Data]
+				in
+				    dbo_ErrorLog
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDatabase",
+    "displayName": "TelemetryDataEH",
+    "description": "TelemetryDataEH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "0816c1ca-5906-86ac-4835-dd77a2de58ad"
+  }
+}

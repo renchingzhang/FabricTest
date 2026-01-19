@@ -1,0 +1,64 @@
+table SalesLT_vProductAndDescription
+	lineageTag: 34b73a82-9e49-4eb9-9824-65fb04377c10
+	sourceLineageTag: [dbo].[SalesLT_vProductAndDescription]
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e5aa043a-8699-4b6f-86b2-ed7b63d870d3
+		sourceLineageTag: ProductID
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 86e7bb9d-7495-4b5e-b1d0-fc4c3c072fa9
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductModel
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a19da407-ad18-4850-a1e0-b7be48981be2
+		sourceLineageTag: ProductModel
+		summarizeBy: none
+		sourceColumn: ProductModel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Culture
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fa2f100b-e159-4be5-adc3-8839799f01ce
+		sourceLineageTag: Culture
+		summarizeBy: none
+		sourceColumn: Culture
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 791d6a6a-d524-4f07-b0fa-8b1686cf3c75
+		sourceLineageTag: Description
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SalesLT_vProductAndDescription = entity
+		mode: directLake
+		source
+			entityName: SalesLT_vProductAndDescription
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

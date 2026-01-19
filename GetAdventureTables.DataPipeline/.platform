@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "GetAdventureTables"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a69b191b-bf7e-99af-417c-d0915cddfbf8"
+  }
+}
