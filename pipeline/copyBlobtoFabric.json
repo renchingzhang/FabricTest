@@ -72,6 +72,10 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"typeProperties": {
+					"method": "PUT",
+					"body": "@string(activity('Get Metadata1').output.childItems)"
+				},
 				"linkedServiceName": {
 					"referenceName": "WebConnection1",
 					"type": "LinkedServiceReference"
