@@ -74,6 +74,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "PUT",
+					"relativeUrl": "testdata/files/filelist.json",
 					"body": "@string(activity('Get Metadata1').output.childItems)"
 				},
 				"linkedServiceName": {
