@@ -6,7 +6,8 @@
 		"typeProperties": {
 			"url": "https://renadbcenst.blob.core.windows.net/testdata/files/filelist.json",
 			"enableServerCertificateValidation": true,
-			"authenticationType": "Anonymous"
+			"authenticationType": "ManagedServiceIdentity",
+			"aadResourceId": "https://storage.azure.com/"
 		}
 	}
 }
