@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "GetFolderFiles",
+						"referenceName": "GetFileList",
 						"type": "DatasetReference"
 					},
 					"fieldList": [],
@@ -25,7 +25,7 @@
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "DelimitedTextReadSettings"
+						"type": "BinaryReadSettings"
 					}
 				}
 			}
