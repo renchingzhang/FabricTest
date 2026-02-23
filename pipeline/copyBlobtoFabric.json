@@ -50,7 +50,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "FileList",
-					"value": "@string(activity('Get Metadata1').output)"
+					"value": "@string(activity('Get Metadata1').output.childItems)"
 				}
 			}
 		],
