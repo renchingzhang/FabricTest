@@ -85,7 +85,7 @@
 					},
 					"relativeUrl": "testdata/files/filelist.json",
 					"body": {
-						"value": "@string(activity('Filelist').output.childItems)",
+						"value": "@variables('FileList')",
 						"type": "Expression"
 					}
 				},
