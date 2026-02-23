@@ -47,9 +47,18 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "FileList",
+					"value": "@string(activity('Get Metadata1').output)"
+				}
 			}
 		],
+		"variables": {
+			"FileList": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
