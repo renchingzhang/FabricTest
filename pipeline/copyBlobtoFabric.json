@@ -85,7 +85,7 @@
 					},
 					"relativeUrl": "testdata/files/filelist.json",
 					"body": {
-						"value": "\n@replace(\n  replace(\n    replace(\n      string(activity('Get Metadata1').output.childItems),\n      '[{',\n      '[\\n  {'\n    ),\n    '},{',\n    '},\\n  {'\n  ),\n  '}]',\n  '}\\n]'\n)\n",
+						"value": "@string(activity('Get Metadata1').output.childItems)\n\nstring(activity('Get Metadata1').output.childItems)",
 						"type": "Expression"
 					}
 				},
