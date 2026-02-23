@@ -50,7 +50,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "FileList",
-					"value": "\n@replace(\n  string(activity('Get Metadata1').output.childItems),\n  '},{',\n  '},\\n{'\n)\n"
+					"value": "string(activity('Get Metadata1').output.childItems"
 				}
 			},
 			{
