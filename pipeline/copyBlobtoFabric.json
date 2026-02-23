@@ -71,7 +71,11 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "WebConnection1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"variables": {
