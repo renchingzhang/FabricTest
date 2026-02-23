@@ -74,6 +74,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "PUT",
+					"headers": {
+						"x-ms-version": "",
+						"x-ms-blob-type": "BlockBlob"
+					},
 					"relativeUrl": "testdata/files/filelist.json",
 					"body": "@string(activity('Get Metadata1').output.childItems)"
 				},
