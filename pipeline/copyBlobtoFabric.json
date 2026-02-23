@@ -75,7 +75,7 @@
 				"typeProperties": {
 					"method": "PUT",
 					"headers": {
-						"x-ms-version": "0",
+						"x-ms-version": "2019-07-07",
 						"x-ms-blob-type": "BlockBlob",
 						"x-ms-date": "@utcNow()",
 						"Content-Type": "application/json"
