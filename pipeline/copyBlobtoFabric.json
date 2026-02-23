@@ -77,7 +77,10 @@
 					"headers": {
 						"x-ms-version": "2019-07-07",
 						"x-ms-blob-type": "BlockBlob",
-						"x-ms-date": "@utcNow()",
+						"x-ms-date": {
+							"value": "@formatDateTime(utcNow(),'r')",
+							"type": "Expression"
+						},
 						"Content-Type": "application/json"
 					},
 					"relativeUrl": "testdata/files/filelist.json",
