@@ -1,0 +1,22 @@
+{
+	"name": "SnowflakeCustomer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TestSnowflakes",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "VARIANT_COL",
+				"type": "VARIANT"
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "CUSTOMER"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "renchingdf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "670fb4d6-ffa8-49f8-9f13-9beffdb4e3f8",
+		"tenantId": "365fe8cd-c7d7-4140-ac91-82adb600f69d"
+	}
+}

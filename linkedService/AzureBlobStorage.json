@@ -1,0 +1,12 @@
+{
+	"name": "AzureBlobStorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"sasUri": "https://renadbcenst.blob.core.windows.net/data/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEY4MkE2RDcxLUM2ODgtNEI2Ri04Qzg2LUU1NTg4OUREQTNGMl9iNDY5ZDcwYy01ZTljLTQyZTAtYTlhNi00MTcwZTlmMmEwMjEiDQp9"
+		}
+	}
+}

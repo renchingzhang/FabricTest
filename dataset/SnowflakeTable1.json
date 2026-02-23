@@ -1,0 +1,17 @@
+{
+	"name": "SnowflakeTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TestSnowflakes",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "testcustomer"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
