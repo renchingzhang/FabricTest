@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "WebConnection",
 		"typeProperties": {
-			"url": "https://renadbcenst.blob.core.windows.net/testdata/files/filelist.json",
+			"url": "https://renadbcenst.blob.core.windows.net",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "ManagedServiceIdentity",
 			"aadResourceId": "https://storage.azure.com/"
