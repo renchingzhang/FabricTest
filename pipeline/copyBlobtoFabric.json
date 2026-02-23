@@ -75,8 +75,10 @@
 				"typeProperties": {
 					"method": "PUT",
 					"headers": {
-						"x-ms-version": "",
-						"x-ms-blob-type": "BlockBlob"
+						"x-ms-version": "0",
+						"x-ms-blob-type": "BlockBlob",
+						"x-ms-date": "@utcNow()",
+						"Content-Type": "application/json"
 					},
 					"relativeUrl": "testdata/files/filelist.json",
 					"body": "@string(activity('Get Metadata1').output.childItems)"
