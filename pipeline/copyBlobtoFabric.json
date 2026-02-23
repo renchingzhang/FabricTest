@@ -50,7 +50,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "FileList",
-					"value": "@concat(\n  '{\\n',\n  '  \"generatedAtUtc\": \"', utcNow(), '\",\\n',\n  '  \"items\": ',\n  replace(\n    replace(\n      replace(string(activity('Get Metadata1').output.childItems),'[{','[\\n    {'),\n      '},{','},\\n    {'\n    ),\n    '}]','}\\n  ]'\n  ),\n  '\\n}'\n)"
+					"value": {
+						"value": "@activity('Get Metadata1').output.itemNameconcat(\n  '{\\n',\n  '  \"generatedAtUtc\": \"', utcNow(), '\",\\n',\n  '  \"items\": ',\n  replace(\n    replace(\n      replace(string(activity('Get Metadata1').output.childItems),'[{','[\\n    {'),\n      '},{','},\\n    {'\n    ),\n    '}]','}\\n  ]'\n  ),\n  '\\n}'\n)",
+						"type": "Expression"
+					}
 				}
 			},
 			{
