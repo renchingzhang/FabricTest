@@ -84,7 +84,10 @@
 						"Content-Type": "application/json"
 					},
 					"relativeUrl": "testdata/files/filelist.json",
-					"body": "@string(activity('Get Metadata1').output.childItems)"
+					"body": {
+						"value": "\n@replace(\n  replace(\n    replace(\n      string(activity('Get Metadata1').output.childItems),\n      '[{',\n      '[\\n  {'\n    ),\n    '},{',\n    '},\\n  {'\n  ),\n  '}]',\n  '}\\n]'\n)\n",
+						"type": "Expression"
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "WebConnection1",
