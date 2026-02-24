@@ -51,7 +51,7 @@
 				"typeProperties": {
 					"variableName": "FileList",
 					"value": {
-						"value": "@concat(\n  '{\\n',\n  '  \"generatedAtUtc\": \"', utcNow(), '\",\\n',\n  '  \"items\": ',\n  replace(\n    replace(\n      replace(\n        string(activity('Get Metadata1').output.childItems),\n        '[{','[\\n    {'\n      ),\n      '},{','},\\n    {'\n    ),\n    '}]','}\\n  ]'\n  ),\n  '\\n}'\n)",
+						"value": "@concat(\n  '{', base64ToString('DQo='),\n  '  \"generatedAtUtc\": \"', utcNow(), '\",', base64ToString('DQo='),\n  '  \"items\": ',\n  replace(\n    string(activity('Get Metadata1').output.childItems),\n    '},{',\n    concat('},', base64ToString('DQo='), '    {')\n  ),\n  base64ToString('DQo='),\n  '}'\n)",
 						"type": "Expression"
 					}
 				}
