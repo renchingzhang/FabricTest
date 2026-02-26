@@ -1,0 +1,17 @@
+{
+	"name": "Schedule_daily",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2026-02-26T20:19:00",
+				"timeZone": "Central Standard Time"
+			}
+		}
+	}
+}
