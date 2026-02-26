@@ -118,8 +118,7 @@
 		],
 		"variables": {
 			"pipelinenameconfig": {
-				"type": "String",
-				"defaultValue": "@string(activity('GetConfigValue').output.firstRow)"
+				"type": "String"
 			}
 		},
 		"annotations": []
