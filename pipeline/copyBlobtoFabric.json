@@ -33,35 +33,11 @@
 				}
 			},
 			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Get Metadata1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "FileList",
-					"value": {
-						"value": "@concat(\n  '{', base64ToString('DQo='),\n  '  \"generatedAtUtc\": \"', utcNow(), '\",', base64ToString('DQo='),\n  '  \"Childitems\": ',\n  replace(\n    string(activity('Get Metadata1').output.childItems),\n    '},{',\n    concat('},', base64ToString('DQo='), '    {')\n  ),\n  base64ToString('DQo='),\n  '}'\n)",
-						"type": "Expression"
-					}
-				}
-			},
-			{
 				"name": "Write To File",
 				"type": "WebActivity",
 				"dependsOn": [
 					{
-						"activity": "Set variable1",
+						"activity": "Get Metadata1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -99,9 +75,9 @@
 			}
 		],
 		"parameters": {
-			"FileName": {
+			"Filelist": {
 				"type": "string",
-				"defaultValue": "@dataset().fileName"
+				"defaultValue": "@"
 			}
 		},
 		"annotations": []
