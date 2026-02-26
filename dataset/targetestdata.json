@@ -1,0 +1,19 @@
+{
+	"name": "targetestdata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobGetMetaData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "targettestdata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
