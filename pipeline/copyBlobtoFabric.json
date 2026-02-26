@@ -102,7 +102,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "ForEach1",
+						"activity": "ForEach",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -121,7 +121,7 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEach",
 				"type": "ForEach",
 				"dependsOn": [
 					{
