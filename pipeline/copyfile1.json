@@ -73,7 +73,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "\n@contains(\n  pipeline().parameters.pipelineConfig.pipelines,\n  pipeline().Pipeline\n)",
+						"value": "@contains(\n  string(pipeline().parameters.pipelineConfig.pipelines),\n  pipeline().Pipeline\n)",
 						"type": "Expression"
 					}
 				}
