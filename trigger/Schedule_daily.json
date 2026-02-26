@@ -3,14 +3,26 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyfile1",
+					"type": "PipelineReference"
+				}
+			}
+		],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
-				"interval": 15,
+				"frequency": "Day",
+				"interval": 1,
 				"startTime": "2026-02-26T20:19:00",
-				"timeZone": "Central Standard Time"
+				"timeZone": "Central Standard Time",
+				"schedule": {
+					"hours": [
+						12
+					]
+				}
 			}
 		}
 	}
