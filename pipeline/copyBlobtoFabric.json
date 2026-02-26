@@ -64,7 +64,7 @@
 					},
 					"relativeUrl": "testdata/files/filelist.json",
 					"body": {
-						"value": "@variables('FileList')",
+						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
 					}
 				},
