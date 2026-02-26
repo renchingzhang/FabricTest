@@ -1,0 +1,100 @@
+{
+	"name": "copyBlobtoFabric",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "TestFileList",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"childItems"
+					],
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "BinaryReadSettings"
+					}
+				}
+			},
+			{
+				"name": "Write To File",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "PUT",
+					"headers": {
+						"x-ms-version": "2019-07-07",
+						"x-ms-blob-type": "BlockBlob",
+						"x-ms-date": {
+							"value": "@formatDateTime(utcNow(),'r')",
+							"type": "Expression"
+						},
+						"Content-Type": "application/json"
+					},
+					"relativeUrl": "testdata/files/filelist.json",
+					"body": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "WebConnection1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"pipelineconfig": {
+				"type": "object",
+				"defaultValue": {
+					"pipelines": {
+						"EDW_NA_DLY": {
+							"source": "edw",
+							"sink": "adls",
+							"path": "/na/daily",
+							"batchSize": 1000
+						},
+						"EDW_EU_DLY": {
+							"source": "edw",
+							"sink": "adls",
+							"path": "/eu/daily",
+							"batchSize": 2000
+						}
+					}
+				}
+			}
+		},
+		"annotations": []
+	}
+}

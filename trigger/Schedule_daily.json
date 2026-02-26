@@ -1,0 +1,48 @@
+{
+	"name": "Schedule_daily",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyfile1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"pipelineconfig": {
+						"pipelines": {
+							"Copyfile1": {
+								"source": {
+									"schema": "dbo",
+									"table": "Customer",
+									"type": "SqlServer"
+								},
+								"sink": {
+									"container": "raw",
+									"folder": "testdata"
+								},
+								"watermarkColumn": "ModifiedDate",
+								"isActive": true
+							}
+						}
+					}
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2026-02-26T20:19:00",
+				"timeZone": "Central Standard Time",
+				"schedule": {
+					"hours": [
+						12
+					]
+				}
+			}
+		}
+	}
+}

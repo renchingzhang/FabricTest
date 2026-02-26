@@ -1,0 +1,13 @@
+{
+	"name": "WebConnection1",
+	"properties": {
+		"annotations": [],
+		"type": "WebConnection",
+		"typeProperties": {
+			"url": "https://renadbcenst.blob.core.windows.net",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "ManagedServiceIdentity",
+			"aadResourceId": "https://storage.azure.com/"
+		}
+	}
+}

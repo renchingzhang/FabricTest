@@ -1,0 +1,12 @@
+{
+	"name": "AzureBlobGetMetaData",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://renadbcenst.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}

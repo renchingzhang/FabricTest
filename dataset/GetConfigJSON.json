@@ -1,0 +1,58 @@
+{
+	"name": "GetConfigJSON",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobGetMetaData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ADFconfig.json",
+				"folderPath": "config",
+				"container": "testdata"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"pipelineName": {
+					"type": "string"
+				},
+				"source": {
+					"type": "object",
+					"properties": {
+						"schema": {
+							"type": "string"
+						},
+						"table": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						}
+					}
+				},
+				"sink": {
+					"type": "object",
+					"properties": {
+						"container": {
+							"type": "string"
+						},
+						"folder": {
+							"type": "string"
+						}
+					}
+				},
+				"watermarkColumn": {
+					"type": "string"
+				},
+				"isActive": {
+					"type": "boolean"
+				}
+			}
+		}
+	}
+}

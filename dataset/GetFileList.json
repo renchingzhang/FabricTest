@@ -1,0 +1,17 @@
+{
+	"name": "GetFileList",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobGetMetaData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "testdata"
+			}
+		}
+	}
+}
