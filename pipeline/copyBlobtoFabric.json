@@ -136,9 +136,10 @@
 				}
 			}
 		],
-		"variables": {
-			"FileList": {
-				"type": "String"
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "@dataset().fileName"
 			}
 		},
 		"annotations": []
