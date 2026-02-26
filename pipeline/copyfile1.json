@@ -70,7 +70,13 @@
 				"name": "Validateconfig",
 				"type": "IfCondition",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "\n@contains(\n  pipeline().parameters.pipelineConfig.pipelines,\n  pipeline().Pipeline\n)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
