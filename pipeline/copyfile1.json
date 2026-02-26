@@ -82,7 +82,35 @@
 		"parameters": {
 			"pipelineconfig": {
 				"type": "object",
-				"defaultValue": "@pipeline().parameters.pipelineConfig.pipelines[pipeline().Pipeline]"
+				"defaultValue": [
+					{
+						"pipelineName": "Copyfile1",
+						"source": {
+							"schema": "dbo",
+							"table": "Customer",
+							"type": "SqlServer"
+						},
+						"sink": {
+							"container": "raw",
+							"folder": "testdata"
+						},
+						"watermarkColumn": "ModifiedDate",
+						"isActive": true
+					},
+					{
+						"pipelineName": "Copyfile1",
+						"source": {
+							"schema": "dbo",
+							"table": "Sales"
+						},
+						"sink": {
+							"container": "raw",
+							"folder": "FactSales"
+						},
+						"watermarkColumn": "LastUpdated",
+						"isActive": true
+					}
+				]
 			}
 		},
 		"annotations": []
