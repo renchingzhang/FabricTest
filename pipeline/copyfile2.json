@@ -61,8 +61,8 @@
 			}
 		],
 		"parameters": {
-			"pi": {
-				"type": "string"
+			"pipelienconfig": {
+				"type": "object"
 			}
 		},
 		"annotations": []
