@@ -60,6 +60,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"pi": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
