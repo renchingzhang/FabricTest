@@ -76,7 +76,23 @@
 		],
 		"parameters": {
 			"pipelineconfig": {
-				"type": "object"
+				"type": "object",
+				"defaultValue": {
+					"pipelines": {
+						"EDW_NA_DLY": {
+							"source": "edw",
+							"sink": "adls",
+							"path": "/na/daily",
+							"batchSize": 1000
+						},
+						"EDW_EU_DLY": {
+							"source": "edw",
+							"sink": "adls",
+							"path": "/eu/daily",
+							"batchSize": 2000
+						}
+					}
+				}
 			}
 		},
 		"annotations": []
